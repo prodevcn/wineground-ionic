@@ -1,0 +1,54 @@
+<ion-view view-title="GrapeBase">
+  <ion-header-bar align-title="center" class="bar-clear padding">
+    <div class="buttons">
+      <button ng-if="fromSearch" class="button button-clear button-dark" aria-label="Go back" ng-click="goBack()">
+        <i class="icon-arrow-left"></i>
+      </button>
+    </div>
+    <span style="width: 100%;"></span>
+    <div class="buttons">
+
+    </div>
+  </ion-header-bar>
+  <ion-content class="gb-content padding has-header">
+    <section>
+      <md-subheader ng-if="l3s.length"><h3>Definitely drink these</h3></md-subheader>
+      <md-list>
+        <md-list-item class="md-2-line" ng-repeat="l3 in l3s | filter: {score: 3} | limitTo: 5" ng-controller="l3PairingCtrl">
+          <img ng-src="{{grape.image}}" class="md-avatar" alt="{{grape.grape}}" ng-cloak />
+          <div class="md-list-item-text">
+            <h4 ng-cloak>{{grape.grape}}</h4>
+            <p ng-cloak>{{grape.category}}</p>
+            <h4 class="md-secondary"></h4>
+          </div>
+        </md-list-item>
+      </md-list>
+    </section>
+    <section>
+      <md-subheader ng-if="l2s.length"><h3>Worth trying these</h3></md-subheader>
+      <md-list>
+        <md-list-item class="md-2-line" ng-repeat="l2 in l2s | filter: {score: 2} | limitTo: 5" ng-controller="l2PairingCtrl">
+          <img ng-src="{{grape.image}}" class="md-avatar" alt="{{grape.grape}}" ng-cloak />
+          <div class="md-list-item-text">
+            <h4 ng-cloak>{{grape.grape}}</h4>
+            <p ng-cloak>{{grape.category}}</p>
+            <h4 class="md-secondary"></h4>
+          </div>
+        </md-list-item>
+      </md-list>
+    </section>
+    <section>
+      <md-subheader ng-if="l0s.length"><h3>Avoid these</h3></md-subheader>
+      <md-list>
+        <md-list-item class="md-2-line" ng-repeat="l0 in l0s | filter: {score: 0} | limitTo: 5" ng-controller="l0PairingCtrl">
+          <img ng-src="{{grape.image}}" class="md-avatar" alt="{{grape.grape}}" ng-cloak />
+          <div class="md-list-item-text">
+            <h4 ng-cloak>{{grape.grape}}</h4>
+            <p ng-cloak>{{grape.category}}</p>
+            <h4 class="md-secondary"></h4>
+          </div>
+        </md-list-item>
+      </md-list>
+    </section>
+  </ion-content>
+</ion-view>

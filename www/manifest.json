@@ -1,0 +1,12 @@
+{
+  "name": "GrapeBase",
+  "short_name": "GrapeBase",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "play_store_key": ""
+}
