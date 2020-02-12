@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "21502601884",
+    "firebase_url": "https://grapebase-mobile.firebaseio.com",
+    "project_id": "grapebase-mobile",
+    "storage_bucket": "grapebase-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21502601884:android:cc84b84268c586092e1b59",
+        "android_client_info": {
+          "package_name": "com.gb.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21502601884-5nkpqt1sbfmm47ker88cmkrs4ca9jhqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqQIBrZ7MGoNpSzMuP3xf9iooqbro6hF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21502601884-5nkpqt1sbfmm47ker88cmkrs4ca9jhqf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
