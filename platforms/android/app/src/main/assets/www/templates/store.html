@@ -1,0 +1,34 @@
+<ion-view view-title="GrapeBase">
+  <ion-header-bar align-title="center" class="bar-clear padding">
+    <div class="buttons">
+      <button ng-if="fromSearch" class="button button-clear button-dark" aria-label="Go back" ng-click="goBack()">
+        <i class="icon-arrow-left"></i>
+      </button>
+    </div>
+    <span style="width: 100%;"></span>
+    <div class="buttons">
+
+    </div>
+  </ion-header-bar>
+  <ion-content class="gb-content padding has-header">
+    <h3>Expansion packs</h3>
+    <div class="row" ng-repeat="product in products" style="padding: 0px;">
+      <div class="col gb-card-wide" style="padding: 0px;">
+        <div ng-controller="productCtrl">
+          <img ng-src="{{image}}"></img>
+          <div class="row">
+            <div class="col col-bottom">
+              <h4>{{product.title}} {{product.price}}</h4>
+              <p>{{product.description}}</p>
+              <div class="row">
+                <div class="col">
+                  <button class="button gb-button button-small button-block" ng-click="buy(product.productId)"><i class="icon-unlock"></i> Unlock</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

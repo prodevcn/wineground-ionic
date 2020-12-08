@@ -1,0 +1,47 @@
+<ion-view view-title="GrapeBase" ng-controller="searchCtrl as ctrl">
+  <ion-header-bar align-title="center" class="bar-clear padding">
+    <div class="buttons">
+    </div>
+    <span style="width: 100%;"></span>
+    <div class="buttons">
+      <button class="button button-clear button-dark" aria-label="Store" ng-click="storeNav()">
+        <i class="icon-store"></i>
+      </button>
+      <!--<button ng-if="noUser" class="button button-clear button-dark" aria-label="Sign in" ng-click="signInNav()">
+        <i class="icon-user"></i>
+      </button>
+      <button ng-if="!noUser" class="button button-clear button-dark" aria-label="Home" ng-click="homeNav()">
+        <i class="icon-home4"></i>
+      </button>-->
+    </div>
+  </ion-header-bar>
+  <ion-content class="gb-content padding has-header bold" style="text-align: center;">
+    <h1 style="padding: 20vh 5vw 5vh 5vw;">What are you craving?</h1>
+    <form>
+      <md-autocomplete
+          md-no-cache="false"
+          md-selected-item="ctrl.selectedItem"
+          md-search-text="ctrl.searchText"
+          md-items="item in ctrl.querySearch(ctrl.searchText)"
+          md-selected-item-change="ctrl.selectedItemChange(item)"
+          md-item-text="item.term"
+          md-min-length="2"
+          md-escape-options="clear"
+          placeholder="Pinot, Pasta, Pork?"
+          md-menu-class="autocomplete-custom-template"
+          md-menu-container-class="custom-container">
+        <md-item-template>
+          <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">
+            {{item.term}}
+          </span>
+        </md-item-template>
+        <md-not-found>
+          No food or wines matching "{{ctrl.searchText}}" were found.
+        </md-not-found>
+      </md-autocomplete>
+    </form>
+    <button class="gb-button button" style="min-width: 40vw; margin-top: 5vh;" ng-click="search()" ng-disabled="submitting">Pair it</button>
+    <h4 class="gb-title" style="position: absolute; bottom: 5.5vh; width: 100%;">Grape Base</h4>
+    <p style="position: absolute; bottom: 3vh; width: 100%;">v0.2.1</p>
+  </ion-content>
+</ion-view>
